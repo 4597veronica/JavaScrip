@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!-- En este programa pèdiremos tres nombre y los guardaremos en una Array, despues los mostramos por pantallas -->
+	<p id="nom"></p>
+    
+			<script type="text/javascript">
+                var nombres=new Array();
+                for (var i=0; i<3; i++){
+                    nombres[i]=prompt("Introduce un nombre");
+                };
+                document.getElementById("nom").innerHTML= nombres;
+			</script>
+</body>
+</html>
