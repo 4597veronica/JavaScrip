@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+	<!-- Este script te pide 4 numeros. Los dos primeros te los sum y los dos ultimos te los multiplica -->
+	<p id="suma"></p>
+	<p id="multiplicacion"></p>
+	<script type="text/javascript">
+		//pido por pantalla los cuatro numeros
+		var numero1= prompt("Por favor introduce el primer numero");
+		var numero2= prompt("Por favor introduce el segundo numero");
+		var numero3= prompt("Por favor introduce el tercer numero");
+		var numero4= prompt("Por favor introduce el cuarto numero");
+				
+		var suma= parseInt(numero1)+parseInt(numero2);
+		var multi= parseInt(numero3)*parseInt(numero4);
+		document.getElementById("suma").innerHTML="La suma de los dos primeros numeros es: "+suma;
+		document.getElementById("multiplicacion").innerHTML="La multiplicacion de los dos ultimos numeros es: "+multi;
+				
+	</script>
+</body>
+</html>
+
