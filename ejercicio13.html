@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+<!-- Este programa pide las edades de tres grupos. 
+	5 de mañana 
+	6 de tarde 
+	11 de noche 
+	Despues los compara y muestra un mensaje especificando cual es el mayor -->
+	
+<!-- Escrimbimos los parafos que vamos a necesitar, uno por comparacion -->
+	<p id="igual"></p>
+	<p id="primero"></p>
+	<p id="segundo"></p>
+	<p id="tercero"></p>
+    	
+
+    <script type="text/javascript">
+        /* Declaro todas las variables que voya ancesitar */
+	    var promitgmati=0
+	    var promitgtarda=0
+	    var promitgnit=0
+        
+        var sumamati=0
+        var sumatarda=0
+        var sumanit=0
+        
+        //Declaro las Arrays
+        //Mañana
+        var matí=new Array();
+        for(var i=0; i<5; i++) {
+            mati[i]=(prompt("Edad alumne mati"));
+        };
+        
+        //Tarde
+        var tarda=new Array();
+        for(var i=0; i<6; i++) {
+            tarda[i]=(prompt("Edad alumne tarda"));
+        };
+        
+        //Noche
+		var nit=new Array();
+        for(var i=0; i<11; i++) {
+            nit[i]=(prompt("Edad alumne nit"));
+        };
+       
+        
+           
+        /* Calculo el promedio de la mañana */
+        for(var i=0; i<5; i++) {
+            sumamati=sumamati+Number(matí[i]);
+        };
+        promitgmati=sumamati/5
+        
+        //Calculo el promedio de la tarda 
+       for(var i=0; i<6; i++) {
+            sumatarda=sumatarda+Number(tarda[i]);
+        };
+        promitgtarda=sumatarda/6
+        
+        //Calculo el promedio de la noche
+        for(var i=0; i<11; i++) {
+            sumanit=sumanit+Number(nit[i]);
+        };
+        promitgnit=sumanit/11
+        
+        
+        
+        
+        
+        
+        
+        /* Aqui empiezan las comparaciones */
+        
+		//Estamos comparando si todos los promedios son iguales
+        if(promitgmati==promitgtarda && promitgmati==promitgnit){
+            document.getElementById("primero").innerHTML="Son tots els promitjos iguals";
+        };
+       
+       
+       
+         //Comparacion, si el promedio mañana es más grande
+         
+        if( promitgmati>promitgtarda && promitgmati>promitgnit){
+            document.getElementById("primero").innerHTML="El promitg mes gran es el de mati: " + promitgmati;
+            
+            if (promitgtarda==promitgnit){
+                document.getElementById("segundo").innerHTML="Los promedios de mañana y tarde son iguales: " + promitgtarda
+			} //Mañana > Tarde == Noche
+
+            if(promitgtarda>promitgnit){
+				
+                document.getElementById("segundo").innerHTML="El promitg seguent es tarda: " + promitgtarda;
+                document.getElementById("tercero").innerHTML="El promitg mes petit es el de nit: " + promitgnit;
+              } //Mañana > Tarde > Noche
+            else if (promitgnit>promitgtarda){ 
+				
+                document.getElementById("segundo").innerHTML="El promitg seguent es nit: " + promitgnit;
+                document.getElementById("tarda").innerHTML="El promitg mes petit es el de tarda: " + promitgtarda;
+            }; //Mañana > Noche > Tarde 
+        };
+        
+        
+        
+                
+         //Comparacion, si el promedio tarde es más grande
+       if( promitgtarda>promitgmati && promitgtarda>promitgnit){
+		   document.getElementById("primero").innerHTML="El promitg mes gran es el de tarda: " + promitgtarda;
+		   
+		   if (promitgmati==promitgnit){
+                document.getElementById("segundo").innerHTML="Los promedios de mañana y tarde son iguales: " + promitgmati
+			}//Tarde > Mañana == Noche
+			
+           else if(promitgmati>promitgnit){
+               
+                document.getElementById("segundo").innerHTML="El promitg seguent es nit: " + promitgmati;
+                document.getElementById("tercero").innerHTML="El promitg mes petit es el de mati: " + promitgnit;
+              } //Tarde > Mañana > Noche
+              
+            else if(promitgnit>promitgmati){ 
+			
+                document.getElementById("segundo").innerHTML="El promitg seguent es nit: " + promitgnit;
+                document.getElementById("tercero").innerHTML="El promitg mes petit es el de mati: " + promitgmati;
+            }; //Tarde > Noche > Mañana
+        };
+        
+        
+        
+       
+        //Comparacion, si el promedio noche es más grande
+        if( promitgnit>promitgtarda && promitgnit>promitgmati){
+			
+			document.getElementById("primero").innerHTML="El promitg mes gran es el de nit: " + promitgnit;
+			
+			if (promitgmati==promitgtarda){
+                document.getElementById("segundo").innerHTML="Los promedios de mañana y tarde son iguales: " + promitgmati
+			} //Noche > Tarde == Mañana
+			
+            else if(promitgmati>promitgtarda){
+				
+                document.getElementById("segundo").innerHTML="El promitg seguent es mati: " + promitgtmati;
+                document.getElementById("tercero").innerHTML="El promitg mes petit es el de tarda: " + promitgtarda;
+              } //Noche > Mañana > Tarda
+              
+            else if(promitgtarda>promitgmati) { 
+			
+                document.getElementById("segundo").innerHTML="El promitg seguent es tarda: " + promitgtarda;
+                document.getElementById("tercero").innerHTML="El promitg mes petit es el de mati: " + promitgmati;
+            }; //Noche > Tarde > Mañana
+        };
+	</script>
+</body>
+</html>
