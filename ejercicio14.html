@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+	<p id="aaa"></p>
+	<script type="text/javascript">
+		var user=prompt("Introduce el nombre de usuario");
+		var email=prompt("Introduce el email");
+		comprovacion1=email.indexOf("@")
+		comprovacion2=email.indexOf(".")
+		if (comprovacion1 != -1 && comprovacion2 != -1){
+			alert("1")
+			document.getElementById("aaa").innerHTML="Los datos intoducidos son: " + "</br> Usuario: " + user +"</br> email: " + email;
+			};
+	</script>
+</body>
+</html>
