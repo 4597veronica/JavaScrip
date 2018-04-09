@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+	<!-- En este script pediremos el precio y la cantidad del producto para mostrar el total a pagar -->
+	<p id="precio"></p>
+	<script type="text/javascript">	
+		precio= prompt("Por favor introduce el precio del articulo");
+		cantidad= prompt("Por favor introduce la cantidad de productos");
+		total=parseInt(precio)*parseInt(cantidad);
+		document.getElementById("precio").innerHTML="El seu preu serà: " + total;
+	</script>
+</body>
+</html>
+
