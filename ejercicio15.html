@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+    <!-- Este script pide una fecha y comprueba si el formato es correcto -->
+    <p id="aaa"></p>
+    <p id="prueba"></p>
+	<script type="text/javascript">
+		var fecha=prompt("Introduce la fecha con este formato dd-mm-aaaa");
+	   if (fecha.indexOf("-") == 2 && fecha.lastIndexOf("-") == 5 && fecha.length == 10) {
+		  document.getElementById("aaa").innerHTML="La fecha introducida es :" + fecha;
+	   };
+	   else {
+		  document.getElementById("aaa").innerHTML="El formato de fecha no es válido!";
+	   };
+        
+        var cadena1=Number(fecha.slice(0,2));
+        var cadena2=Number(fecha.slice(3,5));
+        alert(cadena1);
+        alert(cadena2);
+        
+        
+        //Meses de Enero Marzo Mayo Julio Agosto Octubre Diciembre
+        if(cadena1 => 1 && cadena1 <= 31){
+            if(cadena2==1 || cadena2==3 || cadena2==5 || cadena2==7 || cadena2==8 || cadena2==10 || cadena2==12){
+                document.getElementById("prueba").innerHTML="El formato de la fecha es el correcto"
+            };
+        };
+        
+        //Meses de Abril Junio Septiembre Noviembre
+        if(cadena1 => 1 && cadena1 <=30){
+            if(cadena2==4 || cadena2==6 || cadena2==9 || cadena2==11){
+                document.getElementById("prueba").innerHTML="El formato de la fecha es el correcto";
+            };
+        };
+        
+        //Meses de Febrero
+        if(cadena1 => 1 && cadena1 <= 28){
+            if(cadena2==2 ){
+                document.getElementById("prueba").innerHTML="El formato de la fecha es el correcto";
+            };
+        };
+        
+       
+        
+        
+	</script>
+</body>
+</html>
