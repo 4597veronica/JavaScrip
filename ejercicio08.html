@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+	<!-- En este programa pediremos tres numeros y mostraremos el mayor de los tres. -->
+	<script type="text/javascript">
+		var numero1 = prompt("Introduce un numero");
+		var numero2 = prompt("Introduce otro numero");
+		var numero3 = prompt("Introduce otro numero");
+	
+		/* Primero comprueba si el numero 1 es mas grande que el 2, despues, si el 1 es más grande que el 3 o
+			los numeros 2 y 3 son iguales*/	
+			
+		//Si los tres son iguales
+		if (parseInt(numero1)==parseInt(numero2) && parseInt(numero1)==parseInt(numero3)){
+			alert("Los tres numeros son iguales");
+		};
+					
+		//Si el primer numero1  es más grande
+		if (parseInt(numero1) > parseInt(numero2)  ) { 
+			if (parseInt(numero1) > parseInt(numero3) || parseInt(numero2) == parseInt(numero3) ) {
+				alert("El numero " + numero1 + " es el más grande");
+			};
+		};
+		//Si el primer numero2  es más grande		 	
+		if (parseInt(numero2) > parseInt(numero1)) {
+			if (parseInt(numero2) > parseInt(numero3)  || parseInt(numero1) == parseInt(numero3) ) {
+				alert("El numero " + numero2 + " es el más grande");
+			};
+		};
+		//Si el primer numero3  es más grande
+		if (parseInt(numero3) > parseInt(numero2)) {
+			if (parseInt(numero3) > parseInt(numero1)  || parseInt(numero2) == parseInt(numero1)) {
+				alert("El numero " + numero3 + " es el más grande");
+			};
+		};
+		
+	</script>
+</body>
+</html>
+
