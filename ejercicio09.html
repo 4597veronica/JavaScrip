@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+	<!-- Este pscript pide el sueldo y la antiguedad; comprueva si las variables son numeros positivos y te calcula el augmento del sueldo.-->
+	<p id="1"></p>
+	<script type="text/javascript">
+		var total
+		var sueldo = prompt("Introduce su sueldo");
+		var antiguedad = prompt("Introduce su antiguedad");
+		
+		if(isNaN(antiguedad)==true || isNaN(sueldo)==true){
+				document.getElementById("1").innerHTML= "Introduce un numero";
+		}
+				
+		else if (antiguedad<0 || sueldo<0){
+				document.getElementById("1").innerHTML= "Introduce un numero entero y positivo";
+			}
+			else{
+				switch (antiguedad) {
+				case "1":
+					total=sueldo*1.1;
+					break;
+				case "2":
+					total=sueldo*1.2;
+					break;
+				case "3":
+					total=sueldo*1.3;
+					break;
+				case "4":
+					total=sueldo*1.4;
+					break;
+				case "5":
+					total=sueldo*1.5;
+					break;
+				  default:
+					total=sueldo*1.05;
+				};
+				document.getElementById("1").innerHTML= "El sueldo total sera " + total;
+			};
+
+	</script>
+</body>
+</html>
+
+
