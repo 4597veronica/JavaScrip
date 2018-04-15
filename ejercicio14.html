@@ -5,16 +5,20 @@
 <title></title>
 </head>
 <body>
+	<!-- Pedimos un usuario y un email y comprobamos que el email tiene @ y punto -->
 	<p id="aaa"></p>
 	<script type="text/javascript">
 		var user=prompt("Introduce el nombre de usuario");
 		var email=prompt("Introduce el email");
-		comprovacion1=email.indexOf("@")
-		comprovacion2=email.indexOf(".")
+		var comprovacion1=email.indexOf("@");
+		var buscar=email.search("@");
+		var comprovacion2=email.indexOf(".",buscar);
 		if (comprovacion1 != -1 && comprovacion2 != -1){
-			alert("1")
 			document.getElementById("aaa").innerHTML="Los datos intoducidos son: " + "</br> Usuario: " + user +"</br> email: " + email;
-			};
+			}
+			else {
+				document.getElementById("aaa").innerHTML="Los datos intoducidos son incorrectos"
+			}
 	</script>
 </body>
 </html>
