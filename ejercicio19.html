@@ -5,12 +5,22 @@
 <title>Ejercicio 19</title>
 </head>
 <body>
+	<!--Este script te pide el numero de DNI y te comprueba si esta bien introducido, además te muestra la letra -->
 	<p id="dni"></p>
 	<script type="text/javascript" language="javascript">
 		var dni=prompt("Introduce tu DNI");
 		var letras= new Array('T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E');
-		modulo=dni%23;
-		document.getElementbyId("dni").innerHTML=dni+modulo
+		if(isNaN(dni)==false){
+			if(dni>0){
+				if(dni.length==8){
+					modulo=dni%23;
+					document.getElementById("dni").innerHTML=dni+letras[modulo];
+				}
+				else(document.getElementById("dni").innerHTML="El DNI no contiene 8 cifras" );
+			}
+			else(document.getElementById("dni").innerHTML="El DNI tiene que ser numero Positivo" );
+		}
+		else(document.getElementById("dni").innerHTML="Por favor, introduzca solo los numeros." );
 	</script>
 </body>
 </html>
